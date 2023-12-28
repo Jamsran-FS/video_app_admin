@@ -33,6 +33,26 @@ class Sidebar extends StatelessWidget {
       headerIconColor: Colors.amberAccent,
       headerText: headerText,
       headerTextStyle: Styles.mediumLightText,
+      frameDecoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          tileMode: TileMode.repeated,
+          colors: [
+            Color.fromRGBO(66, 66, 74, 1),
+            Color.fromRGBO(25, 25, 25, 1),
+          ],
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(66, 66, 66, 0.75),
+            spreadRadius: 0,
+            blurRadius: 20,
+            offset: Offset(0, 10),
+          ),
+        ],
+      ),
     );
   }
 }

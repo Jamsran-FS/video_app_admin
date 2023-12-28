@@ -5,12 +5,18 @@ class ListViewItem extends StatelessWidget {
   final String? title;
   final String? description;
   final String? image;
+  final String? tooltipEdit;
+  final String? tooltipDelete;
+  final String? editPageRouteName;
   const ListViewItem({
     super.key,
     required this.number,
     this.title,
     this.description,
     this.image,
+    required this.tooltipEdit,
+    required this.tooltipDelete,
+    this.editPageRouteName,
   });
 
   @override
@@ -54,12 +60,18 @@ class ListViewItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (editPageRouteName != null) {
+                      context.goNamed(editPageRouteName!);
+                    }
+                  },
                   icon: const Icon(Icons.edit, color: Colors.blue),
+                  tooltip: tooltipEdit,
                 ),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.delete, color: Colors.red),
+                  tooltip: tooltipDelete,
                 ),
               ],
             ),

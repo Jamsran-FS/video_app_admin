@@ -21,9 +21,15 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -48,30 +54,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyCpOvT6t8Nq1qcL2xYbNJSHf3s6_0WnVqw',
-    appId: '1:393235522421:web:73f04a46dd5c3dfe7ba93c',
+    appId: '1:393235522421:web:1e4eb434053231347ba93c',
     messagingSenderId: '393235522421',
     projectId: 'brain-hacker-de2c5',
     authDomain: 'brain-hacker-de2c5.firebaseapp.com',
     storageBucket: 'brain-hacker-de2c5.appspot.com',
-    measurementId: 'G-Z46W1SDKYB',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBg5zbqkQd6dwecDHo5pF03SOJnTq-YJQs',
-    appId: '1:393235522421:android:6a665460c5e47dd17ba93c',
-    messagingSenderId: '393235522421',
-    projectId: 'brain-hacker-de2c5',
-    storageBucket: 'brain-hacker-de2c5.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDlEeJRExmlz41DIrAggdqO9ED4WRMZMtk',
-    appId: '1:393235522421:ios:430b0d8ddd18dfb47ba93c',
-    messagingSenderId: '393235522421',
-    projectId: 'brain-hacker-de2c5',
-    storageBucket: 'brain-hacker-de2c5.appspot.com',
-    iosClientId:
-        '393235522421-mku4d98f9msfipl317av2crfg19das96.apps.googleusercontent.com',
-    iosBundleId: 'com.example.videoApp',
+    measurementId: 'G-1G9Y621YVH',
   );
 }

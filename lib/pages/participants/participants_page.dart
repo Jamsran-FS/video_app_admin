@@ -56,6 +56,9 @@ class _ParticipantsPageState extends State<ParticipantsPage> {
                     title: item.fullName,
                     description: item.intro,
                     image: item.photo,
+                    tooltipEdit: 'Оролцогч засварлах',
+                    tooltipDelete: 'Оролцогч устгах',
+                    editPageRouteName: 'edit_participant',
                   );
                 },
               ),

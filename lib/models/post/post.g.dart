@@ -8,8 +8,8 @@ part of 'post.dart';
 
 Post _$PostFromJson(Map<String, dynamic> json) => Post(
       id: json['id'] as String,
-      title: json['title'] as String,
-      text: json['text'] as String,
+      title: json['title'] as String?,
+      text: json['text'] as String?,
       type: $enumDecode(_$PostTypeEnumMap, json['type']),
       date: DateTime.parse(json['date'] as String),
       like: json['like'] as int,
@@ -23,7 +23,6 @@ Post _$PostFromJson(Map<String, dynamic> json) => Post(
       videoURL: json['videoURL'] as String?,
       duration: json['duration'] as int?,
       watchedSec: json['watchedSec'] as int?,
-      isFavorite: false,
     );
 
 Map<String, dynamic> _$PostToJson(Post instance) => <String, dynamic>{

@@ -4,26 +4,25 @@ part 'post.g.dart';
 
 @JsonSerializable()
 class Post {
-  final String id, title, text;
+  final String id;
+  final String? title, text;
   final PostType type;
   final DateTime date;
   List<String>? images;
   String? participantID, thumbnail, videoURL;
   int? duration, watchedSec;
   int like, comment, view, share;
-  bool isFavorite = false;
 
   Post({
     required this.id,
-    required this.title,
-    required this.text,
+    this.title,
+    this.text,
     required this.type,
     required this.date,
     required this.like,
     required this.comment,
     required this.view,
     required this.share,
-    required this.isFavorite,
     this.images,
     this.participantID,
     this.thumbnail,
