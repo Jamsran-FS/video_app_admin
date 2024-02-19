@@ -10,7 +10,6 @@ class Header extends StatelessWidget {
     required this.routeName,
     required this.tooltip,
   });
-
   @override
   Widget build(BuildContext context) {
     return Row(
