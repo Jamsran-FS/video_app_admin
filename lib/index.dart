@@ -12,7 +12,6 @@ export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:json_annotation/json_annotation.dart';
 export 'package:animated_sidebar/animated_sidebar.dart';
 export 'package:cached_network_image/cached_network_image.dart';
-
 export 'config/index.dart';
 export 'constants/index.dart';
 export 'models/index.dart';
