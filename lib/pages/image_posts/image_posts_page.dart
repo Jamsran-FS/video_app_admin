@@ -9,7 +9,6 @@ class ImagePostsPage extends StatefulWidget {
 
 class _ImagePostsPageState extends State<ImagePostsPage> {
   bool loading = false;
-
   @override
   void initState() {
     setState(() {
