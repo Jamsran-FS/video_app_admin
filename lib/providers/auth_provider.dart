@@ -12,6 +12,7 @@ class AuthProvider with ChangeNotifier {
         this.username = username;
         notifyListeners();
         Logger.s('LOGGED IN');
+        
         return true;
       }
       return false;
