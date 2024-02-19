@@ -9,7 +9,6 @@ class Functions {
 
     if (minutes < 10) minuteStr = '0$minuteStr';
     if (seconds < 10) secondStr = '0$secondStr';
-
     if (hours > 0) return '$hours:$minuteStr:$secondStr';
     return '$minuteStr:$secondStr';
   }
