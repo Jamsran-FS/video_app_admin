@@ -37,7 +37,6 @@ class _AppState extends State<App> {
     _loadStorage();
     super.initState();
   }
-
   void _loadStorage() async {
     try {
       Logger.i("User data loading from local storage...");
